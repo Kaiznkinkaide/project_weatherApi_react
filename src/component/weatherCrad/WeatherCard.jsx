@@ -23,10 +23,10 @@ console.log(data);
         <button onClick={()=>setCity("Köln")}>Köln</button>
         <button onClick={()=>setCity("Australien")}>Australien</button>
         </div>
-        {data.weather && data.weather.length > 0 && ( <h2>{data.weather[0].description}</h2>)}
-        {data.weather && data.weather.length > 0 && ( <img src={`http://openweathermap.org/img/wn/${data.weather?.[0]?.icon}@2x.png`}/>)}
+         <h2>{data?.weather?.[0].description}</h2>
+        <img src={`http://openweathermap.org/img/wn/${data?.weather?.[0].icon}@2x.png`}/>
         <h3>Aktuell: {datas.main?.temp}°C</h3>
-        {data.weather && data.weather.length > 0 && ( <h2>Windgeschwindigkeit: {data.wind.speed} m/s</h2>)}
+        <h2>Windgeschwindigkeit: {data?.wind?.speed} m/s</h2>
         
         </>):(
         <h3></h3>
